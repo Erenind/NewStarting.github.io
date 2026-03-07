@@ -1,0 +1,43 @@
+.history-scroll {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+
+    // .history-planet-center {
+    //     position: absolute;
+    //     left:0;
+    //     top:0;
+    //     width: 10px;
+    //     height: 10px;
+    //     overflow: visible;
+    //     will-change: left top;
+
+    //     .planet-body {
+    //         position: absolute;
+    //         left: 0;
+    //         top: 0;
+    //         transform: translate(-50%, -50%);
+    //         width: 133px;
+    //         height: 133px;
+    //         background-color: var(--planet-color);
+    //         border-radius: 50%;
+    //     }
+    // }
+    .box {
+        width:100px;
+        height:100px;
+        background-color:var(--planet-color);
+        position: relative;
+        transform: rotate(2deg);
+    }
+    .history-content {
+        width:var(--history-content-width);
+        height:100%;
+        position:relative;
+        // right:0;
+        top:0;
+        left: var(--history-content-position-left);
+        
+    }
+
+}

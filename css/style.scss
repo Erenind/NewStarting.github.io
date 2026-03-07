@@ -1,0 +1,20 @@
+// default
+@import "scss/default";
+
+// variables
+@import "scss/variables";
+
+// fonts
+@import "fonts/fonts.scss";
+
+body {
+    background-color: var(--bg-dark);
+    transition: all 0.3s ease-in-out;
+
+    // main styles
+    .main {
+        @import "scss/top-bar";
+        @import "scss/home-page";
+        @import "scss/history-scroll";
+    }
+}

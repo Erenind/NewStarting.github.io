@@ -1,0 +1,46 @@
+:root[data-theme="light"] {
+    --bg-dark: oklch(0.95 0 0);
+    --bg: oklch(0.97 0 0);
+    --bg-light: oklch(1 0 0);
+    --text: oklch(0.05 0 0);
+    --text-muted: oklch(0.5 0 0);
+    // planet
+    --planet-color:oklch(0.6294 0.1 188);
+    // top bar
+    --little-bar-color-3:oklch(23.223% 0.06557 281.294);
+    // top bar-right
+    --little-bar-right-color-3: oklch(61.778% 0.09591 191.815);
+    --little-bar-right-color-4: oklch(72.398% 0.09808 162.869);
+}
+
+:root[data-theme="dark"] {
+    --bg-dark: oklch(0 0 0);
+    --bg: oklch(0.05 0 0);
+    --bg-light: oklch(0.1 0 0);
+    --text: oklch(0.95 0 0);
+    --text-muted: oklch(0.7 0 0);
+    // planet
+    --planet-color:oklch(0.6706 0.1 188);
+    // top bar
+    --little-bar-color-3:oklch(53.223% 0.06557 281.294);
+    // top bar-right
+    --little-bar-right-color-3: oklch(71.778% 0.09591 191.815);
+    --little-bar-right-color-4: oklch(92.398% 0.09808 162.869);
+}
+
+body {
+    // top bar-left
+    --little-bar-color-1: oklch(71.778% 0.09591 191.815);
+    --little-bar-color-2:oklch(70.439% 0.0974 191.79);
+    --little-bar-color-3:oklch(23.223% 0.06557 281.294);
+    // top bar-right
+    --little-bar-right-color-1:oklch(35.165% 0.10321 278.979);
+    --little-bar-right-color-2: oklch(58.856% 0.1008 267.998);
+    // --little-bar-right-color-3: oklch(71.778% 0.09591 191.815);
+    // --little-bar-right-color-4: oklch(92.398% 0.09808 162.869);
+
+    // history content
+    --history-content-width: 60%;
+    --history-content-position-left:30%;
+
+}

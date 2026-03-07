@@ -1,0 +1,85 @@
+.home-page {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .main-title {
+            font-size: 100px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Tilt Warp', sans-serif;
+            color: var(--text);
+            .line-one {
+                font-size: 34px;
+                font-weight: bold;
+                color: var(--text-muted);
+            }
+            .line-two {
+                .character-two {
+                    // color: #4FB7B3;
+                    color:var(--planet-color);
+                }
+            }
+            .subtitle {
+                font-size: 24px;
+                color:var(--text-muted)
+            }
+            // flex-wrap: wrap;
+        }
+
+        .planets {
+            width: 700px;
+            height: 700px;
+            // border: 1px solid #ccc;
+            border-radius: 10px;
+            position:relative
+        }
+
+        .planet-center {
+            // transform: translate(-50%, -50%);
+            position: absolute;
+            // left:50%;
+            // top:50%;
+            // position: relative;
+            width:10px;
+            height:10px;
+            // background-color: oklab(63.5% 0.12823 0.10847);
+            overflow: visible;
+            // box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+            will-change: left top;
+            // transform-perspective: 1000px;
+            .planet-body {
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translate(-50%, -50%);
+                width: 133px;
+                height: 133px;
+                background-color: var(--planet-color);
+                border-radius: 50%;
+                // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            }
+
+        }
+        .rotate-center {
+            width: 10px;
+            height: 10px;
+            // border-radius: 50%;
+            // background-color: #4FB7B3;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            // transform: translate(-50%, -50%);
+        }
+        // .temp-block {
+        //     width:10px;
+        //     height:10px;
+        //     background-color: var(--planet-color);
+        //     position: absolute;
+        //     top:0;
+        //     left:0;
+        // }
+
+    }
