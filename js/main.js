@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     import("./animation/animation-planets.js")
     import("./animation/animation-history.js")
 
+    // load history content
+    import("./history.js").then(module => module.loadHistory());
+
 })
 
 
