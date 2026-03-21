@@ -1,5 +1,5 @@
 .history-scroll {
-    height: 100vh;
+    // height: 100vh;
     width: 100%;
     position: absolute;
 
@@ -23,13 +23,13 @@
     //         border-radius: 50%;
     //     }
     // }
-    .box {
-        width:100px;
-        height:100px;
-        background-color:var(--planet-color);
-        position: relative;
-        transform: rotate(2deg);
-    }
+    // .box {
+        // width:100px;
+        // height:100px;
+        // background-color:var(--planet-color);
+        // position: relative;
+        // transform: rotate(2deg);
+    // }
     .history-content {
         width:var(--history-content-width);
         height:100%;
@@ -38,7 +38,8 @@
         top:0;
         left: var(--history-content-position-left);
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        gap: 20px;
         flex-direction: column;
         align-items: center;
         border: 3px solid var(--textbox-border-gray);
