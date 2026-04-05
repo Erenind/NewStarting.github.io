@@ -1,0 +1,27 @@
+.history-timer-box {
+    width: 80%;
+    height: 600px;
+    position: absolute;
+    left: 100px;
+    top: 0;
+    background-color: oklch(0.6 0.15 288);
+    opacity: 0.1;
+    transition: all 0.3s ease;
+    z-index: 10;
+    
+    &.fixed {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    &.bottom {
+        top: auto;
+        bottom: 0;
+    }
+    
+    &.top {
+        top: 0;
+        bottom: auto;
+    }
+}

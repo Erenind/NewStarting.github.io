@@ -14,10 +14,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // planets animations
     import("./animation/animation-planets.js")
-    import("./animation/animation-history.js")
+    // import("./animation/animation-history.js")
 
     // load history content
     import("./history.js").then(module => module.loadHistory());
+    import("./historyTimeLine.js");
+    // import("./historyTimeLine.js");
 
 })
 

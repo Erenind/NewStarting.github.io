@@ -3,73 +3,105 @@
     "time": "2023-07",
     "type": "text",
     "title": "第一个Hello World",
-    "content": "由python编写,由《看漫画学python》启迪。"
+    "content": "由python编写,由《看漫画学python》启迪。我最喜欢的一件事就是自己动手写代码了，虽然当时什么都不懂，但我觉得好神奇啊！",
+    "border": "light",
+    "timestamp": 1688140800000
   },
   {
     "time": "2023-11",
     "type": "text",
     "title": "前端入门",
-    "content": "启蒙者: 康文昌"
+    "content": "启蒙者: 康文昌。\n 通过他的课程，我学会了html和css的基础知识，能够制作一些简单的网页了。",
+    "border": "gray",
+    "timestamp": 1698768000000
   },
   {
     "time": "2023-11",
     "type": "text",
     "title": "前端深入",
-    "content": "跟随pink老师学习html,css"
+    "content": "跟随pink老师学习html,css和js的进阶知识，学会了响应式设计，css动画，js的基础语法和一些快速开发不过功能有限的开发框架。",
+    "border": "gray",
+    "timestamp": 1698768000000
   },
   {
     "time": "2024-07",
     "type": "text",
     "title": "Js深入",
-    "content": "跟随pink老师学习Javascript"
+    "content": "跟随pink老师学习Javascript，学到了很多知识，我认为也是我自己学到的第一门比较系统和深入的编程语言了。",
+    "border": "gray",
+    "timestamp": 1719763200000
   },
   {
     "time": "2024-06-29",
     "type": "img-1",
     "title": "Ubuntu(linux)",
-    "content": "windows把我硬盘搞坏了，换个硬盘后来Linux。\n 图形化界面安装",
-    "imgUrl": ["res/ubuntu.png"]
+    "content": "windows把我硬盘搞坏了，换个硬盘后来Linux。\n 图形化界面安装。初到Linux的世界，啥都不懂。",
+    "imgUrl": [
+      "res/ubuntu.jpg"
+    ],
+    "border": "gray",
+    "timestamp": 1719590400000
   },
   {
     "time": "2024-11-22",
     "type": "img-1",
     "title": "Arch Linux & Hyprland",
-    "content": "ubuntu 被我玩坏了，来arch linux体验hyprland。\n 纯命令行安装，未使用archinstall",
-    "imgUrl": ["res/arch.png"],
+    "content": "ubuntu 被我运行一个hyprland的安装脚本，几次下载失败把系统搞坏了，所以索性直接来Arch linux体验hyprland。\n 为了学习一下纯命令行安装Linux的过程，所以跟随了一个b站的视频安装了btrfs+hyprland的版本。 并且是Arch + Win双系统。",
+    "imgUrl": [
+      "res/arch.jpg"
+    ],
     "buttonShow": true,
     "buttonUrl": "https://github.com/Erenind/dotfiles",
-    "buttonText": "dotfiles"
+    "buttonText": "dotfiles",
+    "border": "light-green",
+    "timestamp": 1732204800000
   },
   {
     "time": "2025-01-31",
     "type": "img-3",
-    "title": "一个beautiful高考倒计时页面",
-    "content": "使用了catppuccin主题，用于查看当时距离高考的时间。",
-    "imgUrl": ["countdown1.jpg", "countdown2.jpg", "countdown3.jpg"]
+    "title": "自主设计的高考倒计时页面",
+    "content": "其实这个倒计时我在距离高考还有1000多天的时候就搞了一个简陋版。之后心血来潮，刚好对于Linux的statu bar中的悬浮设计比较感兴趣，所以融入了进来。然后我当时也比较喜欢Catppuccin的颜色方案，所以也加上了主题的功能。",
+    "imgUrl": [
+      "res/countdown1.jpg",
+      "res/countdown2.jpg",
+      "res/countdown3.jpg"
+    ],
+    "border": "gray",
+    "timestamp": 1738252800000
   },
   {
     "time": "2025-07-18",
     "type": "text",
     "title": "开发pot插件",
-    "content": "使用ai将输入的内容扩充学习。",
+    "content": "自己不会开发pot插件，但当时发现的一个基于deepseek的插件，所以我fork过来，加了一些功能。从js到README都有AI协助，不得不说AI真好用。去看看github仓库，保真你会被惊艳到。",
     "buttonShow": true,
     "buttonText": "github",
-    "buttonUrl": "https://github.com/Erenind/pot-app-translate-plugin-deepseek"
+    "buttonUrl": "https://github.com/Erenind/pot-app-translate-plugin-deepseek",
+    "border": "gray",
+    "timestamp": 1752768000000
   },
   {
     "time": "2025-09-20",
     "type": "text",
     "title": "物理竞赛",
-    "content": "初赛把我“骗”进了复赛。"
+    "content": "初赛把我“骗”进了复赛。",
+    "border": "gray",
+    "timestamp": 1758297600000
   },
   {
     "time": "2026-02-18",
     "type": "img-3",
     "title": "Bye Arch，Hi Nixos",
-    "content": "被“依赖地狱”困住了，更换为nixos",
-    "imgUrl": ["res/byeArch1.jpg", "res/byeArch2.jpg", "hiNixos.jpg"],
+    "content": "Arch的体验很好，但我安装end-4的一个quickshell安装脚本后，被“依赖地狱”困住了，无法再更新系统了，所以更换为Nixos。来体验Nixos独特的系统管理方式。刚好正合我centre的构想有相似之处，所以直接清盘，只装nixos。",
+    "imgUrl": [
+      "res/byeArch1.jpg",
+      "res/byeArch2.jpg",
+      "res/hiNixos.jpg"
+    ],
     "buttonShow": true,
     "buttonUrl": "https://github.com/Erenind/dotfiles-nixos",
-    "buttonText": "dotfiles"
+    "buttonText": "dotfiles",
+    "border": "gold",
+    "timestamp": 1771344000000
   }
 ]

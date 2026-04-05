@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -272,23 +273,179 @@ body .main .history-scroll .history-content {
   gap: 20px;
   flex-direction: column;
   align-items: center;
-  border: 3px solid var(--textbox-border-gray);
 }
 body .main .history-scroll .history-content .history-item {
+  position: relative;
   width: 300px;
   height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   border: 3px solid var(--textbox-border-light-green);
   border-radius: 10px;
-}
-body .main .history-scroll .history-content .history-item h1 {
-  font-size: 24px;
+  padding: 10px;
   color: var(--text);
 }
+body .main .history-scroll .history-content .history-item h1 {
+  font-size: 27px;
+  margin: 5px 0;
+  white-space: nowrap;
+  margin: 10px 10px 0 10px;
+  border-bottom: 2px solid var(--textbox-border-gray);
+}
 body .main .history-scroll .history-content .history-item p {
-  font-size: 16px;
-  color: var(--text-muted);
+  font-size: 17px;
+  margin: 0 10px;
+}
+body .main .history-scroll .history-content .history-item .history-item-time {
+  font-size: 13px;
+  margin: 0 10px;
+}
+body .main .history-scroll .history-content .history-item {
+  /* 移除直接添加图片的样式，因为现在图片只在预览中显示 */
+}
+body .main .history-scroll .history-content .history-item .history-item-image-icon {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  color: var(--text);
+  cursor: pointer;
+  z-index: 10;
+}
+body .main .history-scroll .history-content .history-item .history-item-image-icon svg {
+  width: 100%;
+  height: 100%;
+}
+body .main .history-scroll .history-content .history-item .history-item-image-preview {
+  position: absolute;
+  top: 0;
+  right: -320px;
+  /* 放在历史项右侧 */
+  width: 300px;
+  background: var(--bg-light);
+  border: 2px solid var(--textbox-border-light);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: none;
+}
+body .main .history-scroll .history-content .history-item .history-item-image-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+body .main .history-scroll .history-content .history-item .history-item-image-preview img:last-child {
+  margin-bottom: 0;
+}
+body .main .history-scroll .history-content .history-item {
+  /* 按钮样式 */
+}
+body .main .history-scroll .history-content .history-item button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 2px solid var(--textbox-border-light-green);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  /* GitHub 图标 */
+}
+body .main .history-scroll .history-content .history-item button::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-github'%3E%3Cpath d='M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4'/%3E%3Cpath d='M9 18c-4.51 2-5-2-7-2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /* 非 hover 时反转颜色 */
+  filter: brightness(0) invert(1);
+}
+body .main .history-scroll .history-content .history-item button {
+  /* 链接样式 */
+}
+body .main .history-scroll .history-content .history-item button a {
+  color: inherit;
+  text-decoration: none;
+}
+body .main .history-scroll .history-content .history-item button {
+  /* 悬停效果 */
+}
+body .main .history-scroll .history-content .history-item button:hover {
+  background-color: var(--textbox-border-light-green);
+  color: var(--bg-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body .main .history-scroll .history-content .history-item button:hover::before {
+  /* hover 时恢复正常颜色 */
+  filter: none;
+}
+body .main .history-scroll .history-content .history-item button {
+  /* 激活状态 */
+}
+body .main .history-scroll .history-content .history-item button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+body .main .history-scroll .history-content .history-item button {
+  /* 根据边框颜色变化 */
+}
+body .main .history-scroll .history-content .history-item button[data-border-color=gray] {
+  border-color: var(--textbox-border-gray);
+}
+body .main .history-scroll .history-content .history-item button[data-border-color=gray]:hover {
+  background-color: var(--textbox-border-gray);
+}
+body .main .history-scroll .history-content .history-item button[data-border-color=light] {
+  border-color: var(--textbox-border-light);
+}
+body .main .history-scroll .history-content .history-item button[data-border-color=light]:hover {
+  background-color: var(--textbox-border-light);
+}
+body .main .history-scroll .history-content .history-item button[data-border-color=gold] {
+  border-color: var(--textbox-border-gold);
+}
+body .main .history-scroll .history-content .history-item button[data-border-color=gold]:hover {
+  background-color: var(--textbox-border-gold);
+}
+body .main .history-scroll .history-content .history-item button[data-border-color=light-green] {
+  border-color: var(--textbox-border-light-green);
+}
+body .main .history-scroll .history-content .history-item button[data-border-color=light-green]:hover {
+  background-color: var(--textbox-border-light-green);
+}
+body .main .history-scroll .history-timer-box {
+  width: 80%;
+  height: 600px;
+  position: absolute;
+  left: 100px;
+  top: 0;
+  background-color: oklch(60% 0.15 288deg);
+  opacity: 0.1;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+body .main .history-scroll .history-timer-box.fixed {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .main .history-scroll .history-timer-box.bottom {
+  top: auto;
+  bottom: 0;
+}
+body .main .history-scroll .history-timer-box.top {
+  top: 0;
+  bottom: auto;
 }/*# sourceMappingURL=style.css.map */
