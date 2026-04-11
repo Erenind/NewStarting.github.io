@@ -32,6 +32,9 @@ function setTimeBox() {
     }
 }
 // setTimeBox()
+addEventListener("wheel",e => {
+    console.log(e)
+})
 
 
 
