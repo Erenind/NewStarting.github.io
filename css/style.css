@@ -267,10 +267,11 @@ body .main .history-scroll .history-content {
   width: var(--history-content-width);
   height: 100%;
   position: relative;
+  z-index: 2;
   top: 0;
   left: var(--history-content-position-left);
   display: flex;
-  gap: 20px;
+  gap: 60px;
   flex-direction: column;
   align-items: center;
 }
@@ -426,26 +427,36 @@ body .main .history-scroll .history-content .history-item button[data-border-col
   background-color: var(--textbox-border-light-green);
 }
 body .main .history-scroll .history-timer-box {
-  width: 80%;
-  height: 600px;
-  position: absolute;
-  left: 100px;
-  top: 0;
-  background-color: oklch(60% 0.15 288deg);
-  opacity: 0.1;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-body .main .history-scroll .history-timer-box.fixed {
+  width: 1200px;
+  height: 741.6px;
   position: fixed;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 0;
+  pointer-events: none;
 }
-body .main .history-scroll .history-timer-box.bottom {
-  top: auto;
+body .main .history-scroll .history-timer-box.in-view {
+  opacity: 1;
+  z-index: 1;
+}
+body .main .history-scroll .history-timer-box .time-line {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  width: 5px;
+  height: 80%;
+  background-color: hsl(180, 56%, 61%);
+  position: relative;
+}
+body .main .history-scroll .history-timer-box .time-line .progress {
+  position: absolute;
+  left: 0;
+  right: 0;
   bottom: 0;
-}
-body .main .history-scroll .history-timer-box.top {
-  top: 0;
-  bottom: auto;
+  height: 0%;
+  background-color: hsl(180, 56%, 61%);
+  transition: height 0.2s ease;
 }/*# sourceMappingURL=style.css.map */
