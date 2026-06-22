@@ -15,6 +15,7 @@
     // border: 3px solid var(--textbox-border-gray);
     .history-item {
         position: relative;
+        z-index: 1;
         width: 300px;
         height: 300px;
         // display: flex;
@@ -79,7 +80,7 @@
             border-radius: 10px;
             padding: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            z-index: 100;
+            z-index: 20;
             display: none;
 
             img {

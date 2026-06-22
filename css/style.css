@@ -277,6 +277,7 @@ body .main .history-scroll .history-content {
 }
 body .main .history-scroll .history-content .history-item {
   position: relative;
+  z-index: 1;
   width: 300px;
   height: 300px;
   border: 3px solid var(--textbox-border-light-green);
@@ -327,7 +328,7 @@ body .main .history-scroll .history-content .history-item .history-item-image-pr
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 100;
+  z-index: 20;
   display: none;
 }
 body .main .history-scroll .history-content .history-item .history-item-image-preview img {
@@ -433,7 +434,7 @@ body .main .history-scroll .history-timer-box {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  opacity: 0; /* hidden by default */
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 0;
   pointer-events: none;
@@ -442,14 +443,78 @@ body .main .history-scroll .history-timer-box.in-view {
   opacity: 1;
   z-index: 1;
 }
+body .main .history-scroll .history-timer-box .time-clock {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 420px;
+  clip-path: inset(0 0 0 50%);
+  overflow: visible;
+}
+body .main .history-scroll .history-timer-box .time-clock svg {
+  width: 100%;
+  height: 100%;
+  color: var(--text);
+}
 body .main .history-scroll .history-timer-box .time-line {
   position: absolute;
   right: 10px;
   top: 30px;
   width: 5px;
   height: 80%;
-  background-color: hsl(180, 56%, 61%);
-  position: relative;
+}
+body .main .history-scroll .history-timer-box .time-line .time-segment {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-radius: 2px;
+}
+body .main .history-scroll .history-timer-box .time-line .time-dim-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  clip-path: inset(0 0 0 0);
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 2px;
+}
+body .main .history-scroll .history-timer-box .time-line .time-label {
+  position: absolute;
+  left: calc(100% + 8px);
+  transform: translateY(50%);
+  white-space: nowrap;
+  font-size: 11px;
+  color: var(--text);
+  opacity: 0.7;
+  line-height: 1;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: opacity 0.2s ease;
+  z-index: 3;
+}
+body .main .history-scroll .history-timer-box .time-line .time-label::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 1px;
+  background-color: var(--text);
+  opacity: 0.3;
+  transition: opacity 0.2s ease, width 0.2s ease;
+}
+body .main .history-scroll .history-timer-box .time-line .time-label:hover {
+  opacity: 1;
+}
+body .main .history-scroll .history-timer-box .time-line .time-label:hover::before {
+  opacity: 0.7;
+  width: 10px;
 }
 body .main .history-scroll .history-timer-box .time-line .progress {
   position: absolute;
@@ -459,4 +524,6 @@ body .main .history-scroll .history-timer-box .time-line .progress {
   height: 0%;
   background-color: hsl(180, 56%, 61%);
   transition: height 0.2s ease;
+  z-index: 2;
+  opacity: 0;
 }/*# sourceMappingURL=style.css.map */
