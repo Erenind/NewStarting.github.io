@@ -1,0 +1,28 @@
+.collision-section {
+    width: 100%;
+    height:1236px;
+    position: absolute;
+    .collision {
+        width: var(--collision-width);
+        height: calc(var(--collision-width) * 0.618);
+        border: 3px solid oklch(66.434% 0.12267 141.068);
+        border-radius: 10px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 80px 0;
+        // display:;
+        // justify-content: start;
+        .collision-item {
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position:absolute;
+            font-weight: bold;
+            // font-size: 24px;
+        }
+    }
+}

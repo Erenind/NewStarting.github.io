@@ -281,7 +281,14 @@
     function checkVisibility(){
         const rect = contentEl.getBoundingClientRect();
         const winH = window.innerHeight || document.documentElement.clientHeight;
-        const shouldShow = rect.top <= winH / 2 && rect.bottom > 0;
+        const midLine = winH / 2;
+
+        const items = document.querySelectorAll('.history-item');
+        const lastBottom = items.length > 0
+            ? items[items.length - 1].getBoundingClientRect().bottom
+            : 0;
+
+        const shouldShow = rect.top <= midLine && lastBottom > midLine;
         if (shouldShow && !visible) {
             visible = true;
             timerBox.classList.add('in-view');

@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     import("./historyTimeLine.js");
     // import("./historyTimeLine.js");
 
+    // collision
+    import("./collision.js");
 })
 
 

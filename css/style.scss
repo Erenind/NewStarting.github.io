@@ -17,10 +17,11 @@ body {
         @import "scss/home-page";
         .history-scroll {
             width:100%;
-            position: absolute;
+            // position: absolute;
 
             @import "scss/history-content";
             @import "scss/history-timer";
         }
+        @import "scss/collision";
     }
 }
